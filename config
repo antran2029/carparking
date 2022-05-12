@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "parkingcar"]
+	url = https://github.com/antran2029/CodeParkingCar.git
+	fetch = +refs/heads/*:refs/remotes/parkingcar/*
+[remote "origin"]
+	url = https://github.com/antran2029/parking-Car.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
