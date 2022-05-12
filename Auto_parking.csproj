@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6F8153E-7D25-4E66-9653-606AD3F41DFA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Auto_parking</RootNamespace>
+    <AssemblyName>Auto_parking</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Searchallwreckers-Car-Audi-TT.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Control, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Control.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV">
+      <HintPath>D:\Emgu\emgucv-windows-x86 2.4.0.1717\bin\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.ML">
+      <HintPath>D:\Emgu\emgucv-windows-x86 2.4.0.1717\bin\Emgu.CV.ML.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>D:\Emgu\emgucv-windows-x86 2.4.0.1717\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util">
+      <HintPath>D:\Emgu\emgucv-windows-x86 2.4.0.1717\bin\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Lib.Image">
+      <HintPath>..\..\Lib.Image\Lib.Image\bin\Debug\Lib.Image.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\My Projects In Laptop\SPM VT X64 AUTO - THD\SPM VT X64 AUTO - THD\References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.28.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MySql.Data\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="tesseractengine3">
+      <HintPath>..\..\..\..\tesseractengine3.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BookingAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingAdmin.Designer.cs">
+      <DependentUpon>BookingAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CameraPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CameraPhone.Designer.cs">
+      <DependentUpon>CameraPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardInfo.cs" />
+    <Compile Include="Checkin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkin.Designer.cs">
+      <DependentUpon>Checkin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Checkin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Checkin2.Designer.cs">
+      <DependentUpon>Checkin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientBooking.Designer.cs">
+      <DependentUpon>ClientBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCheck.Designer.cs">
+      <DependentUpon>ClientCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientInfo.Designer.cs">
+      <DependentUpon>ClientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config.cs" />
+    <Compile Include="FindContours.cs" />
+    <Compile Include="frmBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCao.Designer.cs">
+      <DependentUpon>frmBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaoCaoVaoRa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoVaoRa.Designer.cs">
+      <DependentUpon>frmBaoCaoVaoRa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmData.Designer.cs">
+      <DependentUpon>frmData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiaoDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiaoDien.Designer.cs">
+      <DependentUpon>frmGiaoDien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhapMaThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapMaThe.Designer.cs">
+      <DependentUpon>frmNhapMaThe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhiGuiXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhiGuiXe.Designer.cs">
+      <DependentUpon>frmPhiGuiXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViTriCam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViTriCam.Designer.cs">
+      <DependentUpon>frmViTriCam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageForm.Designer.cs">
+      <DependentUpon>ImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormBook.Designer.cs">
+      <DependentUpon>MainFormBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservationInfo.Designer.cs">
+      <DependentUpon>ReservationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlotInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SlotInfo.Designer.cs">
+      <DependentUpon>SlotInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sound.cs" />
+    <Compile Include="Devices.cs" />
+    <Compile Include="StaffInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffInfo.Designer.cs">
+      <DependentUpon>StaffInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BookingAdmin.resx">
+      <DependentUpon>BookingAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CameraPhone.resx">
+      <DependentUpon>CameraPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkin.resx">
+      <DependentUpon>Checkin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Checkin2.resx">
+      <DependentUpon>Checkin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientBooking.resx">
+      <DependentUpon>ClientBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCheck.resx">
+      <DependentUpon>ClientCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientInfo.resx">
+      <DependentUpon>ClientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCao.resx">
+      <DependentUpon>frmBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCaoVaoRa.resx">
+      <DependentUpon>frmBaoCaoVaoRa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmData.resx">
+      <DependentUpon>frmData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGiaoDien.resx">
+      <DependentUpon>frmGiaoDien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapMaThe.resx">
+      <DependentUpon>frmNhapMaThe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhiGuiXe.resx">
+      <DependentUpon>frmPhiGuiXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViTriCam.resx">
+      <DependentUpon>frmViTriCam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageForm.resx">
+      <DependentUpon>ImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormBook.resx">
+      <DependentUpon>MainFormBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReservationInfo.resx">
+      <DependentUpon>ReservationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlotInfo.resx">
+      <DependentUpon>SlotInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffInfo.resx">
+      <DependentUpon>StaffInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\3.jpg" />
+    <Content Include="Images\accept.png" />
+    <Content Include="Images\Bar Chart 3.png" />
+    <Content Include="Images\cancel.gif" />
+    <Content Include="Images\cross.png" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\docs.gif" />
+    <Content Include="Images\edit.gif" />
+    <Content Include="Images\EditTableHS.png" />
+    <Content Include="Images\edoc_register.gif" />
+    <Content Include="Images\excel.gif" />
+    <Content Include="Images\Group 3.png" />
+    <Content Include="Images\Help.png" />
+    <Content Include="Images\Home 2.png" />
+    <Content Include="Images\icon-login-16x16.gif" />
+    <Content Include="Images\key2.png" />
+    <Content Include="Images\kuser32x32.png" />
+    <Content Include="Images\List_BulletsHS.png" />
+    <Content Include="Images\Login Manager32x32.png" />
+    <Content Include="Images\login_icon.png" />
+    <Content Include="Images\logout.png" />
+    <Content Include="Images\new.png" />
+    <Content Include="Images\plus_16.png" />
+    <Content Include="Images\renew.png" />
+    <Content Include="Images\right_16.png" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\search.png" />
+    <None Include="Images\serial.jpg" />
+    <Content Include="Images\settings_16.png" />
+    <Content Include="Images\Update.png" />
+    <Content Include="Images\up_16.png" />
+    <Content Include="Images\User 7 Check.png" />
+    <Content Include="Images\user.gif" />
+    <Content Include="Images\user.png" />
+    <Content Include="Images\Webp.net-resizeimage.jpg" />
+    <Content Include="Images\ZoomHS.png" />
+    <None Include="Images\Đầu đọc thẻ từ trong bãi đỗ xe thông minh.jpg" />
+    <Content Include="lib\opencv_calib3d240.dll" />
+    <Content Include="lib\opencv_contrib240.dll" />
+    <Content Include="lib\opencv_core240.dll" />
+    <Content Include="lib\opencv_features2d240.dll" />
+    <Content Include="lib\opencv_ffmpeg240.dll" />
+    <Content Include="lib\opencv_flann240.dll" />
+    <Content Include="lib\opencv_gpu240.dll" />
+    <Content Include="lib\opencv_highgui240.dll" />
+    <Content Include="lib\opencv_imgproc240.dll" />
+    <Content Include="lib\opencv_legacy240.dll" />
+    <Content Include="lib\opencv_ml240.dll" />
+    <Content Include="lib\opencv_nonfree240.dll" />
+    <Content Include="lib\opencv_objdetect240.dll" />
+    <Content Include="lib\opencv_photo240.dll" />
+    <Content Include="lib\opencv_stitching240.dll" />
+    <Content Include="lib\opencv_video240.dll" />
+    <Content Include="lib\opencv_videostab240.dll" />
+    <None Include="Resources\Report.jpg" />
+    <None Include="Resources\Report1.jpg" />
+    <None Include="Resources\Report %281%29.jpg" />
+    <None Include="Resources\Login Manager32x32.png" />
+    <None Include="Resources\Report2.jpg" />
+    <Content Include="Searchallwreckers-Car-Audi-TT.ico" />
+    <Content Include="x64\liblept172.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\libtesseract304.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\liblept172.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\libtesseract304.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Regis\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMLSS">
+      <Guid>{C21E9CE5-B317-463B-A1B1-B5E36EED59D0}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "Auto_parking.sln",
+    "projects": [
+      "Auto_parking.csproj"
+    ]
+  }
+}
